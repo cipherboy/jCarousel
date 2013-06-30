@@ -295,12 +295,12 @@ function jCarousel() {
         if (this.lawidth != '') {
             lcanvas = document.getElementById('carouselLeftArrow');
             lctx = lcanvas.getContext('2d');
-            jCanvas(lctx, lcanvas, 'cs,cw,b,m:' + (this.lawidth-10) + ':' + (this.laheight-10) + ',l:' + (this.lawidth-10) + ':10,l:10:' + (this.laheight/2) + ',l:' + (this.lawidth-10) + ':' + (this.laheight-10) + ',l:' + (this.lawidth-10) + ':10,fs:' + this.lacolor + ',ss:' + this.lacolor + ',w:5,j:round,s,f,c');
+            jCanvasDraw(lctx, lcanvas, 'cs,cw,b,m:' + (this.lawidth-10) + ':' + (this.laheight-10) + ',l:' + (this.lawidth-10) + ':10,l:10:' + (this.laheight/2) + ',l:' + (this.lawidth-10) + ':' + (this.laheight-10) + ',l:' + (this.lawidth-10) + ':10,fs:' + this.lacolor + ',ss:' + this.lacolor + ',w:5,j:round,s,f,c');
         }
         if (this.rawidth != '') {
             rcanvas = document.getElementById('carouselRightArrow');
             rctx = rcanvas.getContext('2d');
-            jCanvas(rctx, rcanvas, 'cs,cw,b,m:10:' + (this.raheight-10) + ',l:10:10,l:' + (this.rawidth-10) + ':' + (this.raheight/2) + ',l:10:' + (this.raheight-10) + ',l:10:10,fs:' + this.racolor + ',ss:' + this.racolor + ',w:5,j:round,s,f,c');
+            jCanvasDraw(rctx, rcanvas, 'cs,cw,b,m:10:' + (this.raheight-10) + ',l:10:10,l:' + (this.rawidth-10) + ':' + (this.raheight/2) + ',l:10:' + (this.raheight-10) + ',l:10:10,fs:' + this.racolor + ',ss:' + this.racolor + ',w:5,j:round,s,f,c');
         }
     }
 }
