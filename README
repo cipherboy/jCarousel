@@ -1,0 +1,93 @@
+jCarousel v1.2 - A HTML5 Carousel library with Canvas support
+Depends: jCanvas v2.0 (optional for arrows)
+
+Copyright (C) 2011, 2013 Alex Scheel
+All rights reserved.
+Licensed under BSD 2 Clause License:
+ 
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+ 
+- Redistributions of source code must retain the above copyright notice,
+  this list of conditions and the following disclaimer.
+- Redistributions in binary form must reproduce the above copyright notice, 
+  this list of conditions and the following disclaimer in the documentation 
+  and/or other materials provided with the distribution.
+ 
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+A HTML5 Carousel library with Canvas support
+
+Usage:
+  carousel = new jCarouse();
+  carousel.addElement(" ", "Hello", "http://google.com");
+  carousel.addElement(" ", "World", "http://apple.com");
+  carousel.setDisplay(1);
+  carousel.init('div-carousel-id');
+ 
+API:
+  Main:
+    init(container element id) - Builds carousel and initializes it.
+    
+    update() - updates carousel display
+    
+    movePrev() - moves to previous element's position, updates carousel display
+    
+    moveNext() - moves to next element's position, updates carousel display
+    
+  Config:
+    addElement(image, title, link) - adds element to carousel
+      returns: position of new element if success
+               else -1
+    
+    delElement(position) - removes element from carousel
+      returns: -1 on fail, else nothing
+    
+    enableArrow() - enables scrolling arrows on carousel
+                    (default arrows are buttons, optional canvas arrows)
+    
+    disableArrow() - disables scrolling arrows on carousel
+    
+    setLeftArrow(width, height, color) - set up canvas left arrow
+    
+    setRightArrow(width, height, color) - set up canvas right arrow
+    
+    setDisplay(count) - set number of elements to dispaly at once
+    
+  Getters:
+    getElement(position) / getElement()
+      returns: element at position or current element
+    
+    getPrevious(position) / getPrevious()
+      returns: element at previous location from position or current
+    
+    getPrevNumb(position) / getPrevNumb() 
+      returns: position of previous element from position or current
+               -1 on fail
+    
+    getNext(position) / getNext()
+      returns: element at next location from position or current
+    
+    getNextNumb(position) / getNextNumb()
+      returns: position of next element from position or current
+               -1 on fail
+    
+    getLeftArrow()
+      returns: contents of larrow
+    
+    getRightArrow()
+      returns: contents of rarrow
+    
+    buildElement(position) / buildElement()
+      returns: carousel element at position
+
