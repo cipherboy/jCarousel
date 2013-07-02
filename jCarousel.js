@@ -30,67 +30,67 @@
 
 /**
  * Usage:
- * carousel = new jCarouse();
- * carousel.addElement(" ", "Hello", "http://google.com");
- * carousel.addElement(" ", "World", "http://apple.com");
- * carousel.setDisplay(1);
- * carousel.init('div-carousel-id');
+ *   carousel = new jCarouse();
+ *   carousel.addElement(" ", "Hello", "http://google.com");
+ *   carousel.addElement(" ", "World", "http://apple.com");
+ *   carousel.setDisplay(1);
+ *   carousel.init('div-carousel-id');
  *
  * API:
- * Main:
- *   init(container element id) - Builds carousel and initializes it.
+ *   Main:
+ *     init(container element id) - Builds carousel and initializes it.
  *   
- *   update() - updates carousel display
+ *     update() - updates carousel display
  *   
- *   movePrev() - moves to previous element's position, updates carousel display
+ *     movePrev() - moves to previous element's position, updates carousel display
+ *    
+ *     moveNext() - moves to next element's position, updates carousel display
  *   
- *   moveNext() - moves to next element's position, updates carousel display
- *   
- * Config:
- *   addElement(image, title, link) - adds element to carousel
- *     returns: position of new element if success
- *              else -1
- *   
- *   delElement(position) - removes element from carousel
- *     returns: -1 on fail, else nothing
- *   
- *   enableArrow() - enables scrolling arrows on carousel
- *                   (default arrows are buttons, optional canvas arrows)
- *   
- *   disableArrow() - disables scrolling arrows on carousel
- *   
- *   setLeftArrow(width, height, color) - set up canvas left arrow
- *   
- *   setRightArrow(width, height, color) - set up canvas right arrow
- *   
- *   setDisplay(count) - set number of elements to dispaly at once
- *   
- * Getters:
- *   getElement(position) / getElement()
- *     returns: element at position or current element
- *   
- *   getPrevious(position) / getPrevious()
- *     returns: element at previous location from position or current
- *   
- *   getPrevNumb(position) / getPrevNumb() 
- *     returns: position of previous element from position or current
- *              -1 on fail
- *   
- *   getNext(position) / getNext()
- *     returns: element at next location from position or current
- *   
- *   getNextNumb(position) / getNextNumb()
- *     returns: position of next element from position or current
- *              -1 on fail
- *   
- *   getLeftArrow()
- *     returns: contents of larrow
- *   
- *   getRightArrow()
- *     returns: contents of rarrow
- *   
- *   buildElement(position) / buildElement()
- *     returns: carousel element at position
+ *   Config:
+ *     addElement(image, title, link) - adds element to carousel
+ *       returns: position of new element if success
+ *                else -1
+ *     
+ *     delElement(position) - removes element from carousel
+ *       returns: -1 on fail, else nothing
+ *     
+ *     enableArrow() - enables scrolling arrows on carousel
+ *                     (default arrows are buttons, optional canvas arrows)
+ *     
+ *     disableArrow() - disables scrolling arrows on carousel
+ *     
+ *     setLeftArrow(width, height, color) - set up canvas left arrow
+ *     
+ *     setRightArrow(width, height, color) - set up canvas right arrow
+ *     
+ *     setDisplay(count) - set number of elements to dispaly at once
+ *     
+ *   Getters:
+ *     getElement(position) / getElement()
+ *       returns: element at position or current element
+ *     
+ *     getPrevious(position) / getPrevious()
+ *       returns: element at previous location from position or current
+ *     
+ *     getPrevNumb(position) / getPrevNumb() 
+ *       returns: position of previous element from position or current
+ *                -1 on fail
+ *     
+ *     getNext(position) / getNext()
+ *       returns: element at next location from position or current
+ *     
+ *     getNextNumb(position) / getNextNumb()
+ *       returns: position of next element from position or current
+ *                -1 on fail
+ *     
+ *     getLeftArrow()
+ *       returns: contents of larrow
+ *     
+ *     getRightArrow()
+ *       returns: contents of rarrow
+ *     
+ *     buildElement(position) / buildElement()
+ *       returns: carousel element at position
 **/
 
 function jCarousel() {
